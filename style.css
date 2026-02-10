@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-roxo-destaque:#9747FF;
+    --cor-roxo-hover:#8233E8;
+    --cor-offWhite-textoDark:#FFFFFF;
+    --cor-grafite-textoLight:#232323;
+    --cor-fundo-dark:#0E1014;
+    --cor-fundo-light:#FFFFFF;
+}
+
+body{
+    min-height: 100vh;         
+    
+    background-color: var(--cor-fundo-light);
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--cor-grafite-textoLight);
+    transition: 0.4s ease;
+    overflow: hidden;
+}
+
+body.modo-dark{
+    --cor-fundo-light: var(--cor-fundo-dark);
+    --cor-grafite-textoLight: var(--cor-offWhite-textoDark);
+
+    transition: 0.4s ease;
+}
+
+body.modo-dark img#imgLogo{
+    content: url(img/Logo-dark.png);
+}
+
+body.modo-dark img#imgModoDark{
+    content: url(img/Modo-light.png);
+}
+
+main{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: flex-start;
+
+    
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+img#imgLogo{
+    width: 200px;
+    height: 34px;
+}
+
+img#imgLogo:hover{
+    cursor: pointer;
+}
+
+img#imgModoDark:hover{
+    cursor: pointer;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+h1{
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 4rem; /* equivalente a 64px, mais comum na web */
+
+    text-align: center;
+
+    color: var(--cor-roxo-destaque);
+}
+
+#textoNormal{
+    color: var(--cor-grafite-textoLight);
+}
+
+h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    color: var(--cor-grafite-textoLight);
+    text-align: center;
+
+    
+    max-width: 792px;
+    width: 100%;
+
+    margin: 0 auto;
+
+
+    white-space: normal; /* permite quebra de linha */
+    overflow-wrap: break-word; /* padrão moderno para quebrar palavras */
+}
+
+#areaBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    height: 66px;
+    width: 340px;
+    
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+
+    border-radius: 36px;
+    border: none;
+
+    margin: 40px auto;
+
+    background-color: var(--cor-roxo-destaque);
+    color: var(--cor-offWhite-textoDark);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: var(--cor-roxo-hover);
+}
+
+
+#areaImg{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#areaImg img{
+    max-width: 792px;
+    width: 100%;
+    height: auto; /* MUITO importante */
+}
+
+@media(max-width: 768px){
+    header{    
+        margin: 60px 0 0;
+        padding: 0 60px;
+    }
+
+    section{
+        height: 882px;
+        max-width: 658px;
+        width: 100%;
+
+        margin: 72px 60px auto ;
+        margin: 72px auto;
+        padding: 0 20px;
+    }
+
+    h3{
+        margin-top: 40px;
+    }
+
+    #areaImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    }
+
+    #areaImg img{
+        transform: translateX(55px);
+    }
+}
+
+@media(max-width: 375px){
+    header{    
+        margin: 32px 0 0;
+        padding: 0 17px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    h3{
+        font-size: 20px;
+    }
+
+    section{
+        margin: 60px 0 43px;
+    }
+
+    button{
+    height: 66px;
+    width: 251px;
+    font-size: 20px;
+    }
+
+    #areaImg img{
+        content: url(img/Celulares-sobrepostos-mobile.png);
+        transform: none;
+    }
+}
