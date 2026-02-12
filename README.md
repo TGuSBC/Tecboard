@@ -10,7 +10,7 @@ Projeto de landing page, com modo dark e light. desenvolvido durante meus estudo
 
 🔗 Demo online
 
-https://github.com/TGuSBC/Tecboard.git
+https://tgusbc.github.io/Tecboard/
 
 🛠️ Tecnologias utilizadas
 
